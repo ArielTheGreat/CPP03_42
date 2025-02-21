@@ -18,7 +18,42 @@ ClapTrap::ClapTrap(std::string name_input)
     attackDamage = 0;
 }
 
+ClapTrap::ClapTrap(const ClapTrap& obj)
+{
+    name = obj.name;
+    hitPoints = obj.hitPoints;
+    energyPoints = obj.energyPoints;
+    attackDamage = obj.attackDamage;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap& obj)
+{
+    if (this != &obj)
+	{
+		name = obj.name;
+        hitPoints = obj.hitPoints;
+        energyPoints = obj.energyPoints;
+        attackDamage = obj.attackDamage;
+	}
+	return (*this);
+}
+
 ClapTrap::~ClapTrap()
 {
     std::cout << "Destructor called" << std::endl;
+}
+
+void ClapTrap::attack(const std::string& target)
+{
+
+}
+
+void ClapTrap::takeDamage(unsigned int amount)
+{
+
+}
+
+void ClapTrap::beRepaired(unsigned int amount)
+{
+
 }
