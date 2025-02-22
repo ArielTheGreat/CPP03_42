@@ -22,6 +22,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& obj)
 
 ScavTrap::ScavTrap(const ScavTrap& obj)
 {
+	std::cout << "ScavTrap copy constructor is called!" << std::endl;
 	name = obj.name;
 	HitPoints = obj.HitPoints;
 	EnergyPoints = obj.EnergyPoints;

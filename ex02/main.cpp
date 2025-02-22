@@ -13,7 +13,7 @@ int main()
 	
 	ClapTrap tester1("Mikey");
 	tester1.attack("Mario");
-	ScavTrap tester2("Princess Happy");
+	ScavTrap tester2("Princess");
 	tester2.attack("cherry");
 	FragTrap tester3("Lemon");
 	tester3.attack("Tree");
