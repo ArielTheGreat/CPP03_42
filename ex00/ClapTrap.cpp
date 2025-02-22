@@ -20,6 +20,7 @@ ClapTrap::ClapTrap(std::string name_input)
 
 ClapTrap::ClapTrap(const ClapTrap& obj)
 {
+    std::cout << "Object copy constructor callled" << std::endl;
     name = obj.name;
     HitPoints = obj.HitPoints;
     EnergyPoints = obj.EnergyPoints;
@@ -28,6 +29,7 @@ ClapTrap::ClapTrap(const ClapTrap& obj)
 
 ClapTrap &ClapTrap::operator=(const ClapTrap& obj)
 {
+    std::cout << "Equal operator called" << std::endl;
     if (this != &obj)
 	{
 		name = obj.name;
@@ -52,12 +54,11 @@ void ClapTrap::attack(const std::string& target)
 	}
 	if (this->HitPoints <= 0 )
 	{
-		std::cout << "No HP!" << target << " dead!" << "\n";
+		std::cout << "No HP!" << this->name << " dead!" << "\n";
 		return ;	
 	}
     std::cout << "ClapTrap " << this->name << " attacks " << target << " causing " << this->AttackDamage << " points of damage!" << std::endl;
     EnergyPoints--;
-
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
